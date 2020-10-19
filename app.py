@@ -15,12 +15,12 @@ colors = {
 }
 
 csv_file = None
-for file in os.listdir():
+for file in os.listdir('file'):
     if file[-4:]=='.csv':
         csv_file=file
         break
 if csv_file!=None:
-    df = pd.read_csv(csv_file)
+    df = pd.read_csv(os.path.join('file',csv_file))
 
 
 numeric_col = list()
